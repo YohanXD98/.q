@@ -101,3 +101,60 @@ print("A média de turma é: {}" .format)
 for i in range(num_alunos):
  if notas[i] > media:
  print("Parabéns {}!" .format(nomes[i]))
+ 
+ ######################################################
+ notas = [5,9,8,7,6,5,7,8,10,4]
+count = 0
+for i in range(10):
+    if notas[i]>= 7 and notas[i] <= 10:
+      count = count +1
+
+print(count)
+
+#ou
+notas = []
+count = 0
+for i in range(10):
+    notas.append(int(input("Digite sua nota: ")))
+    if notas[i]>= 7 and notas[i] <= 10:
+      count = count +1
+
+print(count)
+
+#2
+idades = []
+soma = 0
+media = 0
+count = 0
+
+for i in range(10):
+    idades.append(int(input("Digite a sua idade: ")))
+    soma = soma + idades[i]
+    if idades[i] >= 30:
+     count = count +1
+
+media = soma /10
+print ("a média é {} e os números acima de 30 são {}" .format(media,count))
+
+#3
+salários = []
+estagiario = 0
+junior = 0
+senior = 0
+pleno = 0
+
+for i in range(15):
+    salários.append(float(input("Digite os salários: ")))
+    if salários[i] >=500 or salários[i] <= 1000:
+      estagiario = estagiario +1
+    if salários[i] >=1001 or salários[i] <= 2500:
+      junior = junior +1
+    if salários[i] >=2501 or salários[i] <= 4500:
+      senior = senior +1
+    if salários[i] >=4501 or salários[i] <= 10000:
+      pleno = pleno +1
+      
+print("Estágiarios: {}" .format(estagiario))
+print("Juniors: {}" .format(junior))
+print("seniors: {}" .format(senior))
+print("Plenos: {}" .format(pleno))
